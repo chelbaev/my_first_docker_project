@@ -4,6 +4,12 @@ git clone https://github.com/chelbaev/my_first_docker_project.git
 
 cd my_first_docker_project
 
+в этой папке должен быть .env с такими данными:
+
+SQLALCHEMY_DATABASE_URI=postgresql://postgres:password@mypostgres:5432/mydb
+
+SQLALCHEMY_TRACK_MODIFICATIONS=False
+
 docker network create your-network
 
 docker run --name table --network=your-network -p 5000:4000 -e FLASK_ENV=development --add-host=db_host:172.17.0.2 --env-file .env -d chelbaev/table:1.0.0
