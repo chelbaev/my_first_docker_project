@@ -1,8 +1,8 @@
 # my_first_docker_project
 
-git clone ...
+git clone https://github.com/chelbaev/my_first_docker_project.git
 
-cd ...
+cd my_first_docker_project
 
 docker network create your-network
 
